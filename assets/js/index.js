@@ -11,11 +11,10 @@ saveBtn.addEventListener('click', addStyle)
 
 class validateColors {
   constructor(alpha, ...colors) {
-    colors.forEach((event) => {
-      if (isNaN(event)) throw new TypeError('Значение должно быть числом')
-      if (!Number.isInteger(event))
-        throw RangeError('Значение должно быть целым')
-      if (event < 0 || event > 255)
+    colors.forEach((e) => {
+      if (isNaN(e)) throw new TypeError('Значение должно быть числом')
+      if (!Number.isInteger(e)) throw RangeError('Значение должно быть целым')
+      if (e < 0 || e > 255)
         throw RangeError('Значение должно быть больше 0 и меньше чем 255')
     })
 
